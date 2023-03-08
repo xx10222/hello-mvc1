@@ -26,7 +26,7 @@ public class MyView {
     }
 
     private void modelToRequestAttribute(Map<String, Object> model, HttpServletRequest request) {
-        model.forEach((key, value) -> request.getRequestDispatcher(viewPath));
+        model.forEach((key, value) -> request.setAttribute(key, value));
     }
 
 }
